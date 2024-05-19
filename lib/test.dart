@@ -157,10 +157,27 @@ class _UserListViewState extends State<UserListView1> {
         },
         child: Text('Delete First Item'),
       ),
+      ElevatedButton(
+        onPressed: () {
+          // Remove the last item from the list
+          setState(() {
+            if (_users.isNotEmpty) {
+              _users.removeLast();
+            }
+          });
+        },
+        child: Text('Delete Last Item'),
+      ),
 
     ],
   ),
 
+
+
+
+
+
     );
   }
 }
+
