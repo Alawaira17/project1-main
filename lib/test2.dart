@@ -74,9 +74,14 @@ class _UserListViewState extends State<UserListView2> {
           Employee myItem = _users[index];
           return ListTile(
             leading: Icon(Icons.person),
-            title: Text(myItem.empName),
-            subtitle: Text("ID: ${myItem.empId}\nDate: ${myItem.empDate}"),
-
+            title: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Id: " + myItem.empId.toString()),
+                Text("Name: " + myItem.empName.toString()),
+                Text("Date: " + myItem.empDate.toString()),
+              ],
+            ),
             onTap: () {
               // Action when tapping the item
               print("Tapped on ${myItem.empId}");
