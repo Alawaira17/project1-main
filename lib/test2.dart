@@ -1,5 +1,5 @@
 
-// ignore_for_file: unused_import, prefer_const_constructors
+// ignore_for_file: unused_import, prefer_const_constructors, prefer_interpolation_to_compose_strings, avoid_print
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
